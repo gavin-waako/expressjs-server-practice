@@ -1,4 +1,5 @@
 import { Router } from "express";
+import bodyParser from "body-parser";
 
 // initialize router
 let router = Router();
@@ -24,5 +25,8 @@ router.get("/first_few", (request, response) => {
 
   response.json(first_few);
 });
+
+// create upload route
+router.post("/upload", (request, response) => {});
 
 export default router;
