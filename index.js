@@ -4,6 +4,7 @@ import router from "./router";
 let app = express();
 let PORT_NUM = 9999;
 
+// Use router for api routes
 app.use("/api", router);
 
 // Initialize server
