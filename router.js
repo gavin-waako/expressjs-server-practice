@@ -27,6 +27,15 @@ router.get("/first_few", (request, response) => {
 });
 
 // create upload route
-router.post("/upload", (request, response) => {});
+router.post("/upload", (request, response) => {
+  let contents = request.body;
+  console.log("Received a response with: " + JSON.stringify(contents));
+
+  if (contents.name !== undefined && contents.price !== undefined) {
+    my_data.push(contents);
+  }
+
+  response.json("Upload successful!");
+});
 
 export default router;
